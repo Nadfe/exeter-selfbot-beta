@@ -35,7 +35,7 @@ with open('config.json') as f:
     config = json.load(f)
 
 token = os.environ['token']
-password = os.environ('password')
+password = os.environ['password']
 prefix = config.get('prefix')
 
 nitro_sniper = config.get('nitro_sniper')
@@ -138,7 +138,7 @@ Clear()
 
 
 def Init():
-    token = config.get('token')
+    token = os.environ['token']
     try:
         Exeter.run(token, bot=False, reconnect=True)
         os.system(f'title (Exeter Selfbot) - Version {SELFBOT.__version__}')
