@@ -34,13 +34,13 @@ class SELFBOT():
 with open('config.json') as f:
     config = json.load(f)
 
-token = config.get('token')
-password = config.get('password')
+token = os.environ['token']
+password = os.environ('password')
 prefix = config.get('prefix')
 
 nitro_sniper = config.get('nitro_sniper')
 
-stream_url = "https://www.twitch.tv/souljaboy"
+stream_url = "https://www.twitch.tv/yourragegaming"
 tts_language = "en"
 
 start_time = datetime.datetime.utcnow()
